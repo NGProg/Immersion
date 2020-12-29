@@ -1,12 +1,12 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-import SignUp from './components/signup/signup.jsx';
+import Chat from './components/chat/chat.jsx';
 
 function App() {
   return (
     <div className="App">
-      <SignUp />
       <h1>Comming Soon: Immersion</h1>
+      <Chat />
     </div>
   );
 }

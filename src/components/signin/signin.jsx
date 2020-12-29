@@ -1,7 +1,7 @@
 import { Form, Button } from 'react-bootstrap';
 
-function SignUp() {
-    return (<Form>
+function SignIn() {
+    return (<h1><Form>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" />
@@ -20,8 +20,8 @@ function SignUp() {
         <Button variant="primary" type="submit">
           Submit
         </Button>
-      </Form>
+      </Form></h1>
         );
   }
 
-  export default SignUp;
+  export default SignIn;
