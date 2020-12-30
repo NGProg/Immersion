@@ -1,13 +1,26 @@
-import { Pagination } from 'react-bootstrap';
+import { Tabs, Tab } from 'react-bootstrap';
+import { useState } from 'react';
 
-function Join() {
+const Join = () => {
+    const [key, setKey] = useState('beginner');
+  
     return (
-        <Pagination>
-  <Pagination.Item active>Beginner</Pagination.Item>
-  <Pagination.Item>Intermediate</Pagination.Item>
-  <Pagination.Item>Advanced</Pagination.Item>
-</Pagination>
+      <Tabs
+        id="joinChat"
+        activeKey={key}
+        onSelect={(k) => setKey(k)}
+      >
+        <Tab eventKey="beginner" title="Beginner">
+          <p>This is for beginners</p>
+        </Tab>
+        <Tab eventKey="intermediate" title="Intermediate">
+        <p>This is for Intermediate</p>
+        </Tab>
+        <Tab eventKey="advanced" title="Advanced">
+        <p>This is for Advanced</p>
+        </Tab>
+      </Tabs>
     );
-}
+  }
 
 export default Join;

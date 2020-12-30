@@ -1,14 +1,20 @@
 //import logo from './logo.svg';
+import React from 'react';
+
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
+import SignIn from './components/signin/signin.jsx';
+import SignUp from './components/signup/signup.jsx';
+import Join from './components/join/join.jsx';
 import Chat from './components/chat/chat.jsx';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Comming Soon: Immersion</h1>
-      <Chat />
-    </div>
-  );
-}
+const App = () => (
+    <Router>
+        <Route path="/" exact component={SignIn} />
+        <Route path="/signup" exact component={SignUp} />
+        <Route path="/join" exact component={Join} />
+        <Route path="/chat" exact component={Chat} />
+    </Router>
+);
 
 export default App;
