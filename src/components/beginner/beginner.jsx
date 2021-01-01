@@ -1,24 +1,27 @@
 import { Button, Col, Row, Container, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
+import profiles from '../profile.jsx';
+//console.log(profiles);
 const Beginner = () => {
-
     return (
+       <ProfileCards profile={profiles} />
+    );
+}
+
+const ProfileCards = ({ profile }) => {
+    return profile.map(profile =>  (
         <Container fluid="md">
-            <card>
-                <Row className="justify-content-xs-center">
-                    <Col md={{ span: 4, offset: 4 }}>
-                        <Image src="images/silhouette.jpg" roundedCircle className="mx-auto d-block my-1" />
+                <Row>
+                    <Col sx={{ span: 3, offset: 0 }}>
+                        <Image src={profile.avatar} roundedCircle className="mx-auto d-block my-1" height="50" width="50" />
+                    </Col>
+                    <Col sx={{ span: 9, offset: 0 }} className="text-center my-1" line-height="50">
+                        {profile.username}
                     </Col>
                 </Row>
                 <Row>
-                    <Col md={{ span: 4, offset: 4 }} className="text-center my-1">
-                        Basic Username
-                </Col>
-                </Row>
-                <Row>
                     <Col className="mt-1 mb-2">
-                        Hi, My native language is English. I have basic fluency in Spanish.
+                        Hi, My native language is {profile.native}. I have {profile.fluency} fluency in {profile.practice}.
                 </Col>
                 </Row>
                 <Row>
@@ -38,9 +41,8 @@ const Beginner = () => {
                         <hr></hr>
                     </Col>
                 </Row>
-            </card>
         </Container>
-    );
+    ));
 }
 
 export default Beginner;

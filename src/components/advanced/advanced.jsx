@@ -1,4 +1,4 @@
-import { Image, Button, Col, Row, Container, Table } from 'react-bootstrap';
+import { Image, Button, Col, Row, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Advanced = () => {
