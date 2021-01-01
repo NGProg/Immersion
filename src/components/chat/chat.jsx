@@ -1,31 +1,31 @@
-import { Container, Row, Col, Figure, Image } from 'react-bootstrap';
-//import logo from './logo.svg';
+import { Container, Row, Col, Button, Image } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Chat = () => {
-  return (<Container fluid="md" bg-primary text-white>
-    <Row>
-      <Col>
-        <Figure>
-          <Figure.Image
-            width={171}
-            height={180}
-            src='./logo.jpg'
-            alt="171x180"
-          />
-          <Figure.Caption>
-            Nulla vitae elit libero, a pharetra augue mollis interdum.
-  </Figure.Caption>
-        </Figure>
-
-      <Image src="logo.jpg" rounded />
-    
-      <Image src="holder.js/171x180" roundedCircle />
-    
-      <Image src="holder.js/171x180" thumbnail />
-
-      </Col>
-    </Row>
-  </Container>
+  return (
+    <Container fluid="md">
+      <card>
+        <Row className="justify-content-xs-center">
+          <Col md={{ span: 4, offset: 4 }}>
+            <Image src="images/silhouette.jpg" roundedCircle className="mx-auto d-block my-1" />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={{ span: 4, offset: 4 }} className="text-center my-1">
+            Username
+        </Col>
+        </Row>
+        <Row>
+          <Col md={{ span: 4, offset: 4 }}>
+            <Link to="/chat">
+              <Button variant="primary" type="submit" block size="lg" md={{ span: 4, offset: 4 }}>
+                Let's talk
+                    </Button>
+            </Link>
+          </Col>
+        </Row>
+      </card>
+    </Container>
   );
 }
 
