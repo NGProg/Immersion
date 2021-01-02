@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const Chat = () => {
   return (
     <Container fluid="md">
-      <card>
         <Row className="justify-content-xs-center">
           <Col md={{ span: 4, offset: 4 }}>
             <Image src="images/silhouette.jpg" roundedCircle className="mx-auto d-block my-1" />
@@ -24,7 +23,6 @@ const Chat = () => {
             </Link>
           </Col>
         </Row>
-      </card>
     </Container>
   );
 }

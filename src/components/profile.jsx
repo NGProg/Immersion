@@ -1,25 +1,76 @@
 const profiles = [
     {
-username: "John",
-native: "English",
-practice: "Spanish",
-fluency: "Basic",
-avatar: "images/silhouette.jpg"
+        username: "John",
+        native: "English",
+        practice: "Spanish",
+        fluency: "basic",
+        avatar: "images/silhouette.jpg",
+        status: "online",
     },
-{
-    username: "Jane",
-    native: "Spanish",
-    practice: "English",
-    fluency: "Intermediate",
-    avatar: "images/silhouette.jpg"
-},
-{
-    username: "Robert",
-    native: "English",
-    practice: "Spanish",
-    fluency: "Fluent",
-    avatar: "images/silhouette.jpg"
-}
+    {
+        username: "James",
+        native: "Spanish",
+        practice: "English",
+        fluency: "basic",
+        avatar: "images/silhouette.jpg",
+        status: "online",
+    },
+    {
+        username: "Jean",
+        native: "English",
+        practice: "Spanish",
+        fluency: "basic",
+        avatar: "images/silhouette.jpg",
+        status: "online",
+    },
+    {
+        username: "Sandra",
+        native: "French",
+        practice: "Spanish",
+        fluency: "basic",
+        avatar: "images/silhouette.jpg",
+        status: "online",
+    },
+    {
+        username: "Carl",
+        native: "English",
+        practice: "German",
+        fluency: "basic",
+        avatar: "images/silhouette.jpg",
+        status: "online",
+    },
+    {
+        username: "Jane",
+        native: "Spanish",
+        practice: "English",
+        fluency: "intermediate",
+        avatar: "images/silhouette.jpg",
+        status: "online",
+    },
+    {
+        username: "Adolf",
+        native: "French",
+        practice: "German",
+        fluency: "intermediate",
+        avatar: "images/silhouette.jpg",
+        status: "online",
+    },
+    {
+        username: "Robert",
+        native: "English",
+        practice: "Spanish",
+        fluency: "fluent",
+        avatar: "images/silhouette.jpg",
+        status: "online",
+    },
+    {
+        username: "me",
+        native: "English",
+        practice: "Spanish",
+        fluency: "basic",
+        avatar: "images/silhouette.jpg",
+        status: "online",
+    }
 ];
 
 export default profiles;

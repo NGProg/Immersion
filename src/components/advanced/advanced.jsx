@@ -1,46 +1,53 @@
-import { Image, Button, Col, Row, Container } from 'react-bootstrap';
+import { Button, Col, Row, Container, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import profiles from '../profile.jsx';
+
+const me = profiles.filter((profile) => {
+    return profile.username === "me";
+});
+
+const notMe = profile => profile.username !== "me";
+const online = profile => profile.status === "online";
+const fluent = profile => profile.fluency === "fluent";
+const match = profile => (profile.native === me[0].native && profile.practice === me[0].practice) || 
+(profile.native === me[0].practice && profile.practice === me[0].native); 
+
+const profiles1 = profiles.filter(notMe).filter(online).filter(fluent).filter(match);
 
 const Advanced = () => {
-
     return (
-        <Container fluid="md">
-            <card>
-                <Row className="justify-content-xs-center">
-                    <Col md={{ span: 4, offset: 4 }}>
-                        <Image src="images/silhouette.jpg" roundedCircle className="mx-auto d-block my-1"/>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col md={{ span: 4, offset: 4 }} className="text-center my-1">
-                        Fluent Username
-                </Col>
-                </Row>
-                <Row>
-                    <Col className = "mt-1 mb-2">
-                        Hi, My native language is English. I am fluent in Spanish.
-                </Col>
-                </Row>
-                <Row>
-                    <Col md={{ span: 4, offset: 4 }}>
-                        <Link to="/chat">
-                            <Button variant="primary" type="submit" block size="lg" md={{ span: 4, offset: 4 }}>
-                                Let's talk
-                            </Button>
-                        </Link>
-                    </Col>
-                    <Col md={{ span: 4, offset: 4 }}>
-
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <hr></hr>
-                    </Col>
-                </Row>
-            </card>
-        </Container>
+        <ProfileCards profile={profiles1} />
     );
+}
+
+const ProfileCards = ({ profile }) => {
+    return profile.map(profile => (
+        <Container fluid="md" key={profile.username}>
+            <Row>
+                <Col sx={{ span: 3, offset: 0 }}>
+                    <Image src={profile.avatar} roundedCircle className="mx-auto d-block my-1" height="50" width="50" />
+                </Col>
+                <Col sx={{ span: 6, offset: 0 }} className="text-center my-1" line-height="50">
+                    {profile.username}
+                </Col>
+                <Col sx={{ span: 3, offset: 0 }}>
+                    <Link to="/chat">
+                        <Button variant="link">Let's talk</Button>
+                    </Link>
+                </Col>
+            </Row>
+            <Row>
+                <Col className="mt-1 mb-2">
+                    Hi, My native language is {profile.native}. I am fluent in {profile.practice}.
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <hr></hr>
+                </Col>
+            </Row>
+        </Container>
+    ));
 }
 
 export default Advanced;
