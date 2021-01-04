@@ -1,7 +1,9 @@
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Comms from '../comms/comms.jsx';
 
 const Chat = () => {
+
   return (
     <Container fluid="md">
         <Row className="justify-content-xs-center">
@@ -14,6 +16,7 @@ const Chat = () => {
             Username
         </Col>
         </Row>
+        <Comms />
         <Row>
           <Col md={{ span: 4, offset: 4 }}>
             <Link to="/chat">
