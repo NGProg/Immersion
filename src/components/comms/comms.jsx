@@ -16,7 +16,7 @@ const Comms = () => {
                 || navigator.mozGetUserMedia;
 
             //enabling video and audio channels 
-            navigator.getUserMedia({ video: true, audio: true }, function (stream) {
+            navigator.getUserMedia({ video: false, audio: true }, function (stream) {
                 var video = document.querySelector('video');
 
                 //inserting our stream to the video tag     

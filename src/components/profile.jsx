@@ -4,7 +4,7 @@ const profiles = [
         native: "English",
         practice: "Spanish",
         fluency: "basic",
-        avatar: "images/silhouette.jpg",
+        avatar: "images/john.jpg",
         status: "online",
     },
     {
@@ -68,7 +68,7 @@ const profiles = [
         native: "English",
         practice: "Spanish",
         fluency: "basic",
-        avatar: "images/silhouette.jpg",
+        avatar: "images/me.jpg",
         status: "online",
     }
 ];

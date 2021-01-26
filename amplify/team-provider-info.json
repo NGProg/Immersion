@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-immersion-dev-155659-authRole",
+      "UnauthRoleArn": "arn:aws:iam::185328204663:role/amplify-immersion-dev-155659-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::185328204663:role/amplify-immersion-dev-155659-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-immersion-dev-155659-deployment",
+      "UnauthRoleName": "amplify-immersion-dev-155659-unauthRole",
+      "StackName": "amplify-immersion-dev-155659",
+      "StackId": "arn:aws:cloudformation:us-east-1:185328204663:stack/amplify-immersion-dev-155659/0790e760-5835-11eb-9b05-12afb4d5f445",
+      "AmplifyAppId": "dgv49zu1q2p2k"
+    },
+    "categories": {
+      "auth": {
+        "immersioneea11a25": {}
+      }
+    }
+  }
+}

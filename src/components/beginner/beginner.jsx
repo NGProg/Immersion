@@ -31,7 +31,9 @@ const ProfileCards = ({ profile }) => {
                     {profile.username}
                 </Col>
                 <Col sx={{ span: 3, offset: 0 }}>
-                    <Link to="/chat">
+                    <Link to={{
+                        pathname: "/chat",
+                        data: [profile.username, profile.avatar]}}>
                         <Button variant="link">Let's talk</Button>
                     </Link>
                 </Col>
