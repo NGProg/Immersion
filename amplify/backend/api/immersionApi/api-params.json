@@ -1,0 +1,42 @@
+{
+    "paths": [
+        {
+            "name": "/join",
+            "lambdaFunction": "immersionLambda",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ]
+            },
+            "policyResourceName": "/join"
+        }
+    ],
+    "resourceName": "immersionApi",
+    "apiName": "immersionApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "immersionLambda"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "amplify-immersion-dev-155659-authRole",
+        "unAuthRoleName": "amplify-immersion-dev-155659-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "immersionLambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

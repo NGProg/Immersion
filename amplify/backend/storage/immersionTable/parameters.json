@@ -1,0 +1,5 @@
+{
+    "tableName": "immersion",
+    "partitionKeyName": "id",
+    "partitionKeyType": "S"
+}

@@ -10,7 +10,7 @@ function SignIn() {
         <Col md={{ span: 6, offset: 3 }}>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Ent email" />
+            <Form.Control type="email" placeholder="Enter email" />
           </Form.Group>
         </Col>
       </Row>
